@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>Karl Russell See</title>
+        <meta content="" name="descriptison">
+        <meta content="" name="keywords">
+
+        <!-- Favicons -->
+        <link href="assets/img/pin.png" rel="icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+        <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+        <!-- Template Main CSS File -->
+        <link href="assets/css/style.css" rel="stylesheet">
+
+        <style>
+            
+            .hidden{
+                display: none;
+            }
+    
+            #login {
+                background-image: url('assets/img/login.jpg'); 
+                background-size: cover; 
+                width: 100%; 
+                height: 100%;
+                background-size: cover;
+                position: absolute;
+                bottom: 0;
+                top: 0;
+                left: 0;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 0 15px;
+            }        
+
+            .card {
+                height: 380px;
+                width: 380px;
+                background-color: rgba(0,0,0,0.5) !important;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+      
+            .card-header h3 {
+                color: white;
+                position: relative;
+                font-size: 32px;
+                top: 20px;
+            }
+      
+            .input-group-prepend-one span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                position: relative;
+                left: 100px;
+                box-sizing: border-box;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-bottom: 15px;
+            }
+        
+            .input-group {
+                line-height: 5px;
+                position: relative;
+                top: -25px;
+                margin-bottom: 2px;
+                right: 8px;
+            }
+      
+            input[type=text] {
+                padding: 12px 12px;
+                margin: 8px 0px;
+                display: inline-block;
+                margin-left: 25px;
+                top: 25px;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+                border-radius: 5px;
+            }
+          
+            input[type=password] {
+                padding: 12px 12px;
+                margin: 8px 0px;
+                display: inline-block;
+                margin-left: 25px;
+                top: 35px;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+                border-radius: 5px;
+            }
+      
+            .login_btn {
+                color: black;
+                background-color: #FFC312;
+                width: 72px;
+                font-family: 'Pangolin', cursive;
+                display: inline-block;
+                position: relative;
+                right: 80px;
+                top: 32px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+      
+            .login_btn:hover {
+                color: black;
+                background-color: white;
+            }
+            
+            .education-remove {
+                background-color: #FCEEC8;
+                font-size: 15px;
+                border-radius: 5px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+            }
+
+            #education-form label {
+                font-size: 18px;
+                padding-top: 25px;
+            }
+
+            #education-form { 
+                margin-bottom: 25px;
+            }
+
+            #education-form input[type=text] {
+                padding: 5px 5px;
+                margin: 5px 5px;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+                border-radius: 5px;
+                height: 32px;
+                width: 158px;
+                font-size: 15px;
+            }
+
+            input[type=submit] {
+                background-color: #FCEEC8;
+                font-size: 15px;
+                display: inline-block;
+                border: 2px solid #ccc;
+                box-sizing: border-box;
+                border-radius: 5px;
+                height: 32px;
+                width: 50px;
+            }
+
+            .organization-remove {
+                background-color: #FCEEC8;
+                font-size: 15px;
+                border-radius: 5px;
+                position: absolute;
+                top: 80%;
+                left: 38%;
+                height: 32px;
+                line-height: 2px;
+            }
+
+            #organization-form label {
+                font-size: 18px;
+                padding-top: 25px;
+                font-weight: 900;
+            }
+
+            #organization-form { 
+                margin-bottom: 25px;
+            }
+
+            #organization-form input[type=text] {
+                padding: 5px 5px;
+                margin: 5px 5px;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+                border-radius: 5px;
+                height: 32px;
+                width: 158px;
+                font-size: 15px;
+            }
+
+            #organization-form input[type=submit] {
+                background-color: #FCEEC8;
+                font-size: 15px;
+                display: inline-block;
+                border: 2px solid #ccc;
+                box-sizing: border-box;
+                border-radius: 5px;
+                height: 32px;
+                width: 50px;
+                line-height: 2px;
+            }
+
+            #work-form input[type=text] {
+                padding: 5px 5px;
+                margin: 5px 5px;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+                border-radius: 5px;
+                height: 32px;
+                width: 158px;
+                font-size: 15px;
+            }
+
+            #work-form label {
+                font-size: 18px;
+                padding-top: 25px;
+                font-weight: 800;
+            }
+
+            #work-form { 
+                margin-bottom: 25px;
+            }
+
+            .work-remove {
+                background-color: #FCEEC8;
+                font-size: 15px;
+                border-radius: 5px;
+                position: absolute;
+                top: 50%;
+                left: 102%
+            }
+
+            #about-form label {
+                font-size: 18px;
+                padding-top: 25px;
+                font-weight: 800;
+            }
+
+            #about-form { 
+                margin-bottom: 25px;
+            }
+
+            #about-form input[type=text] {
+                padding: 5px 5px;
+                margin: 5px 5px;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+                border-radius: 5px;
+                height: 45px;
+                width: 1000px;
+                font-size: 15px;
+            }
+
+            #about-form input[type=submit] {
+                background-color: #FCEEC8;
+                font-size: 15px;
+                display: inline-block;
+                border: 2px solid #ccc;
+                box-sizing: border-box;
+                border-radius: 5px;
+                height: 32px;
+                width: 62px;
+            }
+
+            #contact-form label {
+                font-size: 18px;
+                padding-top: 25px;
+                font-weight: 800;
+                padding-left: 15px;
+            }   
+
+            #contact-form input[type=text] {
+                padding: 5px 5px;
+                margin: 5px 5px;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+                border-radius: 5px;
+                height: 32px;
+                width: 158px;
+                font-size: 15px;
+            }
+
+            #contact-form input[type=submit] {
+                background-color: #FCEEC8;
+                font-size: 15px;
+                display: inline-block;
+                border: 2px solid #ccc;
+                box-sizing: border-box;
+                border-radius: 5px;
+                height: 32px;
+                width: 62px;
+            }
+
+        </style>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    </head>
+
+    <body>
+        <div class="v show_visible" id="login">
+            <div class="logincontainer">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Sign In</h3>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="input-group-prepend-one">
+                                <span class="input-group-text"><i class="bx bx-user" style= "font-size: 24px;"></i></span>
+                            </div>
+                            <div class="input-group form-group">
+                                <input type="text" class="form-control" id="login_email" placeholder="username">
+                            </div>
+                            <div class="input-group form-group">
+                                <input type="password" class="form-control" id="login_password" placeholder="password">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn float-right login_btn" id="login_button" type="button">Log In</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <section id="website_content" class="hidden">
+            <!-- ======= Header ======= -->
+            <header id="header" class="fixed-top  d-flex justify-content-center align-items-center header-transparent">
+            <!-- == nav-menu == -->
+                <nav class="nav-menu d-none d-lg-block">
+                    <ul>
+                        <li class="active"><a href="#hero">Home</a></li>
+                        <li><a href="#education-section">Education</a></li>
+                        <li><a href="#organization-section">Organizations</a></li>
+                        <li><a href="#work-section">Works</a></li>
+                        <li><a href="#about-section">About Me</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- ===== End Header ===== -->
+
+            <!-- ======= Home Section ======= -->
+            <section id="hero">
+                <div class="hero-container">
+                <h1>KARL SEE</h1>
+                <a href="#education-section" class="btn-scroll scrollto" title="Scroll Down"><i class="bx bx-chevron-down"></i></a>
+                </div>
+            </section>
+            <!-- ======= End Home ======= -->
+
+            <!-- ======= Education Section ======= -->
+            <section class="education-section" id="education-section">
+                <div class="container">
+                    <h1 class="nav-element-one">Education</h1>
+                    <h2 class="title">Education</h2>
+                    <form id="education-form" onsubmit="return false">
+                        <label for="education_name">Name:</label>
+                        <input type="text" id="education_name">
+        
+                        <label for="education_degree">Degree:</label>
+                        <input type="text" id="education_degree">
+        
+                        <label for="education_start">Start Year:</label>
+                        <input type="text" id="education_start">
+        
+                        <label for="education_end">End Year:</label>
+                        <input type="text" id="education_end">
+        
+                        <input type="submit" value="Add" onclick="add_education()"/>
+                    </form>
+                    <div id="education-content" class="education-content"></div>
+                </div>
+            </section>
+            <!-- ===== End Education Section ===== -->
+
+            <!-- ======= Organization Section ======= -->
+            <section class="organization-section" id="organization-section">
+                <div class="container">
+                    <h1 class="nav-element-two">Organizations</h1>
+                    <h2 class="org-title">Organizations</h2>
+                    <form id="organization-form" onsubmit="return false">
+                        <label for="organization_name">Name:</label>
+                        <input type="text" id="organization_name">
+        
+                        <label for="organization_position">Position:</label>
+                        <input type="text" id="organization_position">
+        
+                        <label for="organization_start">Start Year:</label>
+                        <input type="text" id="organization_start">
+        
+                        <label for="organization_end">End Year:</label>
+                        <input type="text" id="organization_end">
+        
+                        <input type="submit" value="Add" onclick="add_organization()"/>
+                    </form>
+                    <div id="organization-content" class="organization-content"></div>
+                </div>
+            </section>
+            <!-- ===== End Organization Section ===== -->
+
+            <!-- ======= Work Section ======= -->
+            <section id="work-section" class="work-section">
+                <div class="container">
+                    <h1 class="nav-element-one">Works</h1>
+                    <div class="icon"><i class="bx bx-file"></i></div>
+                    <h2 class="work-title">Works</h2>
+                    <p class="post"> &#9734 MPs from previous subjects &#9734</p>
+                    <form id="work-form" onsubmit="return false">
+                        <label for="work_name">MP Name:</label>
+                        <input type="text" id="work_name">
+        
+                        <label for="work_language">Language:</label>
+                        <input type="text" id="work_language">
+        
+                        <label for="work_description">Description:</label>
+                        <input type="text" id="work_description">
+
+                        <input type="submit" value="Add" onclick="add_work()"/>
+                    </form>
+                    <div id="works-content" class="works-content"></div>
+                </div>
+            </section>
+            <!-- ===== End Work Section ===== -->
+
+            <!-- ======= About Section ======= -->
+            <section id="about-section" class="about-section">
+                <div class="container">
+                <h1 class="nav-element-two">About Me</h1>
+                <h2 class="about-title">About Me</h2>
+                <form id="about-form" onsubmit="return false">
+                    <label for="about_text">About Information:</label>
+                    <input type="text" id="about_text">
+
+                    <input type="submit" value="Update" onclick="add_about()"/>
+                </form>
+                <div class="testimonial-item">
+                    <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        <span id="about-content" class="about-content"></span>
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <img src="assets/img/about.jpg" class="testimonial-img">
+                    <h3>Karl See</h3>
+                </div>
+                </div>
+            </section>
+            <!-- ===== End About Section ===== -->
+
+             <!-- ======= Footer ======= -->
+            <footer id="footer">
+                <div class="container">
+                    <h1 class="nav-element-one">Contact Links</h1>
+                    <h2>Karl See</h2>
+                    <div class="social-links">
+                        <a class="github" id="github"><i class="bx bxl-github"></i></a>
+                        <a class="twitter" id="twitter"><i class="bx bxl-twitter"></i></a>
+                        <a class="linkedin" id="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    </div>
+                    <form id="contact-form" onsubmit="return false">
+                        <label for="contact_github">Github</label>
+                        <input type="text" id="contact_github">
+    
+                        <input type="submit" value="Update" onclick="add_github()"/>
+    
+                        <label for="contact_twitter">Twitter</label>
+                        <input type="text" id="contact_twitter">
+    
+                        <input type="submit" value="Update" onclick="add_twitter()"/>
+    
+                        <label for="contact_linkedin">LinkedIn</label>
+                        <input type="text" id="contact_linkedin">
+    
+                        <input type="submit" value="Update" onclick="add_linkedin()"/>
+                    </form>
+                </div>
+            </footer>
+            <!-- ===== End Footer ===== -->
+
+            <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+        </section>
+
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/jquery/jquery.min.js"></script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"></script>
+
+        <script>
+
+            function render_education(id, name, degree, start) {
+                var education_profile = document.createElement("div");
+                var education_name = document.createElement("div");
+                var education_degree = document.createElement("div");
+                var education_start = document.createElement("div");
+                var remove_button = document.createElement("input");
+
+                education_profile.className = "education-profile";
+                education_name.className = "education-name";                
+                education_degree.className = "education-degree";
+                education_start.className = "education-start";
+
+                remove_button.type = "button";
+                remove_button.className = "education-remove";
+                remove_button.onclick = function(){
+                    remove_education(id)
+                };
+
+                education_name.innerHTML = name;
+                education_degree.innerHTML = degree;
+                education_start.innerHTML = start;
+                remove_button.value = "remove"
+
+                education_profile.appendChild(education_name);
+                education_profile.appendChild(education_degree);
+                education_profile.appendChild(education_start);
+                education_profile.appendChild(remove_button);
+                
+                document.getElementById("education-content").appendChild(education_profile);
+            }
+
+            function add_education() {
+                var education_name = document.getElementById("education_name").value;
+                var education_degree = document.getElementById("education_degree").value;
+                var education_start = document.getElementById("education_start").value;
+                var education_end = document.getElementById("education_end").value;
+
+                db.collection("education").add({
+                    school_name: education_name,
+                    degree: education_degree,
+                    start_year: education_start,
+                    end_year: education_end
+                }).then(function(docRef){
+                    location.reload();
+                }).catch(function(error){
+                    alert("Error in adding");
+                });
+            }
+
+            function remove_education(id) {
+                db.collection("education").doc(id).delete().then(function(docRef){
+                   location.reload();
+                }).catch(function(error){
+                    console.error("Error adding document: ", error);
+                    alert("Error in deleting");
+                });
+            }
+            
+            function render_organization(id, name, position, start) {
+                var organization_profile = document.createElement("div");
+                var organization_name = document.createElement("div");
+                var organization_position = document.createElement("div");
+                var organization_start = document.createElement("div");
+                var remove_button = document.createElement("input");
+
+                organization_profile.className = "organization-profile";
+                organization_name.className = "organization-name";                
+                organization_position.className = "organization-position";
+                organization_start.className = "organization-start";
+
+                remove_button.type = "button";
+                remove_button.className = "organization-remove";
+                remove_button.onclick = function(){
+                    remove_organization(id)
+                };
+
+                organization_name.innerHTML = name;
+                organization_position.innerHTML = position;
+                organization_start.innerHTML = start;
+                remove_button.value = "remove"
+
+                organization_profile.appendChild(organization_name);
+                organization_profile.appendChild(organization_position);
+                organization_profile.appendChild(organization_start);
+                organization_profile.appendChild(remove_button);
+                
+                document.getElementById("organization-content").appendChild(organization_profile);
+            }
+
+            function add_organization() {
+                var organization_name = document.getElementById("organization_name").value;
+                var organization_position = document.getElementById("organization_position").value;
+                var organization_start = document.getElementById("organization_start").value;
+                var organization_end = document.getElementById("organization_end").value;
+
+                db.collection("organization").add({
+                    org_name: organization_name,
+                    position: organization_position,
+                    start_year: organization_start,
+                    end_year: organization_end
+                }).then(function(docRef){
+                    location.reload();
+                }).catch(function(error){
+                    alert("Error in adding");
+                });
+            }
+            
+            function remove_organization(id) {
+                db.collection("organization").doc(id).delete().then(function(docRef){
+                   location.reload();
+                }).catch(function(error){
+                    console.error("Error adding document: ", error);
+                    alert("Error in deleting");
+                });
+            }
+
+            function render_work(id, name, language, description) {
+                var work_profile = document.createElement("div");
+                var work_name = document.createElement("div");
+                var work_language = document.createElement("div");
+                var work_description = document.createElement("div");
+                var remove_button = document.createElement("input");
+
+                work_profile.className = "work-profile";
+                work_name.className = "work-name";   
+                work_language.className = "work-language";                
+                work_description.className = "work-description";
+
+                remove_button.type = "button";
+                remove_button.className = "work-remove";
+                remove_button.onclick = function(){
+                    remove_work(id)
+                };
+
+                work_name.innerHTML = name;
+                work_language.innerHTML = language;   
+                work_description.innerHTML = description;
+                remove_button.value = "remove"
+
+                work_profile.appendChild(work_name);
+                work_profile.appendChild(work_language);
+                work_profile.appendChild(work_description);
+                work_profile.appendChild(remove_button);
+                
+                document.getElementById("works-content").appendChild(work_profile);
+            }
+
+            function add_work() {
+                var work_name = document.getElementById("work_name").value;
+                var work_language = document.getElementById("work_language").value;
+                var work_description = document.getElementById("work_description").value;
+
+                db.collection("works").add({
+                    name: work_name,
+                    language: work_language,
+                    description: work_description
+                }).then(function(docRef){
+                    location.reload();
+                }).catch(function(error){
+                    alert("Error in adding");
+                });
+            }
+            
+            function remove_work(id) {
+                db.collection("works").doc(id).delete().then(function(docRef){
+                   location.reload();
+                }).catch(function(error){
+                    console.error("Error adding document: ", error);
+                    alert("Error in deleting");
+                });
+            }
+            
+            function render_introduction(description) {
+                var introduction_profile = document.createElement("div");
+                var introduction_description = document.createElement("div");
+                var update_button = document.createElement("input");
+
+                introduction_profile.className = "introduction-profile";                
+                introduction_description.className = "introduction-description";
+
+                introduction_description.innerHTML = description;
+
+                introduction_profile.appendChild(introduction_description);
+                
+                document.getElementById("about-content").appendChild(introduction_profile);
+            }
+
+            function add_about() {
+                var about_text = document.getElementById("about_text").value;
+        
+                db.collection("introduction").doc('UpvqbINWthmiW18c2gkL').update({
+                    description: about_text
+                }).then(function(docRef){
+                    location.reload();
+                }).catch(function(error){
+                    alert("Error in adding");
+                });
+            }
+
+            function add_github() {
+                var contact_github = document.getElementById("contact_github").value;
+        
+                db.collection("contact").doc('AHJwCBIZpDhLeJ7yjE8t').update({
+                    github: contact_github
+                }).then(function(docRef){
+                    location.reload();
+                }).catch(function(error){
+                    alert("Error in adding");
+                });
+            }
+
+            function add_twitter() {
+                var contact_twitter = document.getElementById("contact_twitter").value;
+        
+                db.collection("contact").doc('AHJwCBIZpDhLeJ7yjE8t').update({
+                    twitter: contact_twitter
+                }).then(function(docRef){
+                    location.reload();
+                }).catch(function(error){
+                    alert("Error in adding");
+                });
+            }
+
+            function add_linkedin() {
+                var contact_linkedin = document.getElementById("contact_linkedin").value;
+        
+                db.collection("contact").doc('AHJwCBIZpDhLeJ7yjE8t').update({
+                    linkedin: contact_linkedin
+                }).then(function(docRef){
+                    location.reload();
+                }).catch(function(error){
+                    alert("Error in adding");
+                });
+            }
+
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var firebaseConfig = {
+                apiKey: "AIzaSyDy-Xq-UjqnBALmyStlQTzh_4or8xM67ig",
+                authDomain: "resume-ccapdev.firebaseapp.com",
+                databaseURL: "https://resume-ccapdev.firebaseio.com",
+                projectId: "resume-ccapdev",
+                storageBucket: "resume-ccapdev.appspot.com",
+                messagingSenderId: "1083322783550",
+                appId: "1:1083322783550:web:4c8f1b821b91d8eb367e6f",
+                measurementId: "G-V0LF9KFPWR"
+            };
+            // Initialize Firebase
+            var app = firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            var db = firebase.firestore(app)
+
+            db.collection("education").get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    console.log(doc.data())
+                    console.log(`  ${doc.data().school_name}`);
+                    console.log(`  ${doc.data().degree}`);
+                    console.log(`  ${doc.data().start_year}`);
+                    console.log(`  ${doc.data().end_year}`);
+                    render_education(doc.id, doc.data().school_name, doc.data().degree, doc.data().start_year+ "-" + doc.data().end_year);
+                });
+            });
+            
+            db.collection("organization").get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    console.log(doc.data())
+                    console.log(`  ${doc.data().org_name}`);
+                    console.log(`  ${doc.data().position}`);
+                    console.log(`  ${doc.data().start_year}`);
+                    console.log(`  ${doc.data().end_year}`);
+                    render_organization(doc.id, doc.data().org_name, doc.data().position, doc.data().start_year+ "-" + doc.data().end_year);
+                });
+            });
+
+            db.collection("works").get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    console.log(doc.data())
+                    console.log(`  ${doc.data().name}`);
+                    console.log(`  ${doc.data().language}`);
+                    console.log(`  ${doc.data().description}`);
+                    render_work(doc.id, doc.data().name, doc.data().language, doc.data().description);
+                });
+            });
+
+            db.collection("introduction").get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    console.log(doc.data())
+                    console.log(`  ${doc.data().description}`);
+                    render_introduction(doc.data().description);
+                });
+            });
+
+            db.collection("contact").get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    console.log(doc.data())
+                    console.log(`  ${doc.data().github}`);
+                    console.log(`  ${doc.data().twitter}`);
+                    console.log(`  ${doc.data().linkedin}`);
+
+                    document.getElementById("github").href = doc.data().github;
+                    document.getElementById("twitter").href = doc.data().twitter;
+                    document.getElementById("linkedin").href = doc.data().linkedin;
+                });
+            });
+
+            $(document).ready(function(){
+                $("#login_button").click(function(){
+                    if($("#login_email").val() == "" || $("#login_password").val() == "") {
+                        alert("Input an email and password");
+                    }
+
+                    else {
+                        var email = $("#login_email").val()
+                        var password = $("#login_password").val()
+                        
+                        firebase.auth().signInWithEmailAndPassword (email, password).then(function(user){
+                            console.log("user logged in");
+                            var user = firebase.auth().currentUser;
+                            if (user != null) {
+                                $("#login").attr("class", "hidden")
+                                $("#website_content").attr("class", "show_visible")
+                            }
+                        }).catch(function(err){
+                            if(err.code == "auth/wrong-password" || err.code == "auth/invalid-email") {
+                                alert("Incorrect email or password");
+                            }
+                            else {
+                                alert(err.message);
+                            }
+                        });
+                    }
+                })
+            });            
+            
+        </script>
+    </body>
+</html>
